@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://r16sftysq88o"]
+
+[ext_resource type="Texture2D" uid="uid://dluo31t3j1gwf" path="res://assets/background/background_1.png" id="1_wiub7"]
+[ext_resource type="PackedScene" uid="uid://yb24kow00ux1" path="res://scene/card.tscn" id="2_yako6"]
+[ext_resource type="Script" path="res://script/game_manager.gd" id="3_ncsol"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background1" type="Sprite2D" parent="."]
+position = Vector2(593, 332)
+scale = Vector2(1.31644, 1.31644)
+texture = ExtResource("1_wiub7")
+
+[node name="GameManager" type="Node2D" parent="." node_paths=PackedStringArray("card_holder")]
+script = ExtResource("3_ncsol")
+card_scene = ExtResource("2_yako6")
+card_holder = NodePath("../CardHolder")
+
+[node name="CardHolder" type="Node2D" parent="."]
