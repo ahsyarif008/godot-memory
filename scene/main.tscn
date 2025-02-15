@@ -11,9 +11,6 @@ position = Vector2(593, 332)
 scale = Vector2(1.31644, 1.31644)
 texture = ExtResource("1_wiub7")
 
-[node name="GameManager" type="Node2D" parent="." node_paths=PackedStringArray("card_holder")]
+[node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("3_ncsol")
 card_scene = ExtResource("2_yako6")
-card_holder = NodePath("../CardHolder")
-
-[node name="CardHolder" type="Node2D" parent="."]
